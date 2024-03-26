@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: jsgepipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jsgepipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: jsgepipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: jsgepipelinesjavascriptdocker 
+          image: jjpro690mycontainerregistry.azurecr.io/jsgepipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
